@@ -1,0 +1,36 @@
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int n,i,j;
+        System.out.println("enter n");
+        n=sc.nextInt();
+        int arr[]=new int[n];
+        System.out .println("enter elements");
+        for(i=0;i<n;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        
+        for(i=0;i<n;i++)
+        {
+            boolean isduplicate=false;
+            for(j=0;j<i;j++)
+            {
+                if(arr[i]==arr[j])
+                {
+                    isduplicate=true;
+                    break;
+                }
+            }
+        
+        if(!isduplicate)
+        {
+            System.out.println(arr[i]+" ");
+        }
+            
+        }
+    }
+}
