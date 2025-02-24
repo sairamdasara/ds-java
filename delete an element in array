@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int n,i,pos,ele;
+        System.out.println("enter n");
+        n=sc.nextInt();
+        int arr[]=new int[n];
+        System.out.println("enter elements");
+        for(i=0;i<n;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        System.out.println("enter pos");
+        pos=sc.nextInt();
+       
+        for(i=pos;i<n-1;i++)
+        {
+            arr[i]=arr[i+1];
+        }
+    
+        n--;
+        
+        for(i=0;i<n;i++)
+        {
+            System.out.println(arr[i]+" ");
+        }
+    }
+}
